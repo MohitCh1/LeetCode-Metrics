@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded",function(){
     const easyLabel=document.getElementById("easy-label");
     const mediumLabel=document.getElementById("medium-label");
     const hardLabel=document.getElementById("hard-label");
-    const cardStatsContainer=document.querySelector(".stats-cards");
+    const cardStatsContainer=document.querySelector(".stats-card");
     
 
     function validateUsername(username){
@@ -103,7 +103,22 @@ document.addEventListener("DOMContentLoaded",function(){
         updateProg(solvedTotalEasyQues,totalEasyQues,easyLabel,easyProgressCircle);
         updateProg(solvedTotalMediumQues,totalMediumQues,mediumLabel,mediumProgressCircle);
         updateProg(solvedTotalHardQues,totalHardQues,hardLabel,hardProgressCircle);
+        const cardsData = [
+            {label: "Overall Submissions", value:val.data.matchedUser.submitStats.totalSubmissionNum[0].submissions },
+            {label: "Overall Easy Submissions", value:val.data.matchedUser.submitStats.totalSubmissionNum[1].submissions },
+            {label: "Overall Medium Submissions", value:val.data.matchedUser.submitStats.totalSubmissionNum[2].submissions },
+            {label: "Overall Hard Submissions", value:val.data.matchedUser.submitStats.totalSubmissionNum[3].submissions },
+        ];
 
+        console.log("card ka data: " , cardsData);
+
+        cardStatsContainer.innerHTML = cardsData.map(
+            data => 
+                    `<div class="card">
+                    <h4>${data.label}</h4>
+                    <p>${data.value}</p>
+                    </div>`
+        ).join("")
          
 
         
@@ -120,4 +135,3 @@ document.addEventListener("DOMContentLoaded",function(){
 
     })
 })
-
