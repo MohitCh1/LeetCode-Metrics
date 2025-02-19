@@ -6,67 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeetMetric</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 </head>
-                              
+
 <body>
 
     <div class="container">
-        <!-- heading -->
-        
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle">🌙 Dark Mode</button>
+
+        <!-- Heading -->
         <h1>LeetMetric</h1>
-        <!-- userdata  -->
+
+        <!-- User Data -->
         <div class="user-container">
             <p id="para">Enter Your Username Below:</p>
             <div class="user-input-container">
-                <input type="text" placeholder="enter your username here" id="user-input">
+                <input type="text" placeholder="Enter your username here" id="user-input">
                 <button id="search-btn">Search</button>
             </div>
-
-
         </div>
-        <!-- stat data  -->
 
-
+        <!-- Stat Data -->
         <div class="stats-container">
             <div class="progress">
                 <div class="progress-item">
                     <div class="easy-progress circle">
                         <span id="easy-label"></span>
-                         <p>Easy</p>
-
+                        <p>Easy</p>
                     </div>
                 </div>
-                <div class="progress-item ">
+                <div class="progress-item">
                     <div class="medium-progress circle">
                         <span id="medium-label"></span>
                         <p>Medium</p>
-
-
                     </div>
                 </div>
-                <div class="progress-item ">
+                <div class="progress-item">
                     <div class="hard-progress circle">
                         <span id="hard-label"></span>
                         <p>Hard</p>
-
-
                     </div>
                 </div>
-                
             </div>
 
-            <div class="stats-card  ">
-                <!-- directly populate here from js code -->
+            <div class="stats-card">
+                <!-- Directly populate here from JS code -->
             </div>
         </div>
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
